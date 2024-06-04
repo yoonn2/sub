@@ -32,6 +32,9 @@ public class ArticleController {
     @PostMapping("/articles/create")
     public String createArticle(ArticleForm form) {
         log.info(form.toString());
+
+        log.info("몰?루");
+
         //System.out.println(form.toString());
         // 1. DTO를 엔티티로 변환
         Article article = form.toEntity();
