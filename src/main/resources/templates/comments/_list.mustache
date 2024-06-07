@@ -94,6 +94,19 @@
         article_id: document.querySelector("#edit-comment-article-id").value
        };
        console.log(comment);
-    });
+       // 수정 REST API 호출
+       const url = "/api/comments/" + comment.id;
+       fetch(url, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(comment)
+    }).then(response => {
+      const msg = (response.ok) ? "댓글이 수정됐습니다." : "댓글 수정 실패..!";
+      alert(msg);
+      window.location.reload();
+     });
+     });
 }
 </script>
