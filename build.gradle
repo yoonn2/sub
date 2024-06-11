@@ -21,7 +21,16 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
+	// mysql 추가
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	//oracle 추가
+	//runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+
+
+
+	//postgreSql 드라이버 추가
+	//runtimeOnly 'org.postgresql:postgresql'
+	//runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
