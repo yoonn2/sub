@@ -22,9 +22,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	// mysql 추가
-	runtimeOnly 'com.mysql:mysql-connector-j'
+	//runtimeOnly 'com.mysql:mysql-connector-j'
 	//oracle 추가
 	//runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+	//mariadb 추가
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
 
 
