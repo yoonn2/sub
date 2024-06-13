@@ -1,5 +1,6 @@
 package com.example.firstproject.api;
 
+import com.example.firstproject.annotation.RunningTime;
 import com.example.firstproject.dto.CommentDto;
 import com.example.firstproject.entity.Comment;
 import com.example.firstproject.service.CommentService;
@@ -32,6 +33,7 @@ public class CommentApiController {
         return ResponseEntity.status(HttpStatus.OK).body(createdDto);
     }
     // 3. 댓글 수정
+    @RunningTime
     @PatchMapping("/api/comments/{id}") // 댓글 수정 요청 접수
     public ResponseEntity<CommentDto> update(@PathVariable Long id,
                                              @RequestBody CommentDto dto) { //update() 메서드 생성
@@ -41,6 +43,7 @@ public class CommentApiController {
         return ResponseEntity.status(HttpStatus.OK).body(updatedDto);
     }
     // 4. 댓글 삭제
+    @RunningTime
     @DeleteMapping("/api/comments/{id}") // 댓글 삭제 요청 접수
     public ResponseEntity<CommentDto> delete(@PathVariable Long id) { //delete() 메서드 생성
         // 서비스에 위임

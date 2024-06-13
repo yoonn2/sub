@@ -21,12 +21,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//h2 DB
+	runtimeOnly 'com.h2database:h2'
 	// mysql 추가
 	//runtimeOnly 'com.mysql:mysql-connector-j'
 	//oracle 추가
 	//runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
 	//mariadb 추가
-	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	//runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
 
 
@@ -39,4 +41,5 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+	jvmArgs '-Xshare:off' // JVM 아규먼트 설정
 }
